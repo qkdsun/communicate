@@ -1,0 +1,6 @@
+父组件传向子组件的值为：{{getParentData}}
+<hr/>
+<input type="text" [(ngModel)] = "sonData">
+<button (click)="sendToParents()">向父组件传值</button>
+
+<h3>来自b组件传过来的值{{bdata}}</h3>

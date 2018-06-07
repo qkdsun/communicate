@@ -1,0 +1,11 @@
+<!--父向子传值-->
+<input type="text" [(ngModel)]="parentDate">
+
+<app-stocka [getParentData]="parentDate" [bdata]="Bdata" (Toparents)="ToparentsHandler($event)"></app-stocka>
+
+子组件传过来的值为： {{ getSonData }}
+
+<hr/>
+
+中间人模式：
+<app-stockb (sentToParents)="getBdata($event)"></app-stockb>
